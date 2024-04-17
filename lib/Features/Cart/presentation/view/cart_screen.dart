@@ -30,7 +30,7 @@ class CartScreen extends StatelessWidget {
             } else {
               return Center(
                 child: Text(
-                  '" There no items in the Cart "',
+                  '"There no items in the Cart"',
                   style: TextStyle(
                     fontSize: 30,
                     fontWeight: FontWeight.bold,

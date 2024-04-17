@@ -22,6 +22,8 @@ class _AlertDialogWidgetState extends State<AlertDialogWidget> {
     super.dispose();
   }
 
+  bool isValid = true;
+
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -64,12 +66,19 @@ class _AlertDialogWidgetState extends State<AlertDialogWidget> {
               width: 2,
             ),
           ),
+          errorText: isValid ? null : "Please enter a value",
         ),
       ),
       actions: [
         TextButton(
           onPressed: () {
-            widget.onPressed(widget.controller.text);
+            if (widget.controller.text.isNotEmpty) {
+              widget.onPressed(widget.controller.text);
+            } else {
+              setState(() {
+                isValid = false;
+              });
+            }
           },
           child: Text(
             "Edit",
