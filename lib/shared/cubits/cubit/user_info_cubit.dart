@@ -2,10 +2,10 @@ import '../../models/user.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
-import 'edit_user_info_state.dart';
+import 'user_info_state.dart';
 
-class EditUserInfoCubit extends Cubit<EditUserInfoState> {
-  EditUserInfoCubit() : super(EditUserInfoInitial());
+class UserInfoCubit extends Cubit<UserInfoState> {
+  UserInfoCubit() : super(UserInfoInitial());
   final userBox = Hive.box<User>("user_box");
   late bool _userTheme;
   late User _user = userBox.getAt(0)!;

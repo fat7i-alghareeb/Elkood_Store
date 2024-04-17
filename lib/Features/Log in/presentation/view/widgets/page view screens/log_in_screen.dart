@@ -1,4 +1,4 @@
-import '../../../../../../shared/cubits/cubit/edit_user_info_cubit.dart';
+import '../../../../../../shared/cubits/cubit/user_info_cubit.dart';
 import '../../../../../../utils/assets.dart';
 import '../../../../../../utils/router/router_paths.dart';
 import 'package:flutter/material.dart';
@@ -130,7 +130,7 @@ class _LoginPageState extends State<LoginPage> with TickerProviderStateMixin {
                 LogInButton(
                   onTap: () async {
                     if (_validateFields()) {
-                      await BlocProvider.of<EditUserInfoCubit>(context)
+                      await BlocProvider.of<UserInfoCubit>(context)
                           .saveUser(
                             userName: usernameController.text,
                             gmail: gmailController.text,

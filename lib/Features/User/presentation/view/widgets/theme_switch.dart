@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../../shared/cubits/cubit/edit_user_info_cubit.dart';
+import '../../../../../shared/cubits/cubit/user_info_cubit.dart';
 
 class ThemeSwitch extends StatefulWidget {
   const ThemeSwitch({
@@ -45,7 +45,7 @@ class _ThemeSwitchState extends State<ThemeSwitch> {
           onChanged: (value) {
             setState(() {
               lightTheme = !value;
-              BlocProvider.of<EditUserInfoCubit>(context).changeTheme();
+              BlocProvider.of<UserInfoCubit>(context).changeTheme();
             });
           },
         ),

@@ -1,5 +1,5 @@
-import '../../../../shared/cubits/cubit/edit_user_info_cubit.dart';
-import '../../../../shared/cubits/cubit/edit_user_info_state.dart';
+import '../../../../shared/cubits/cubit/user_info_cubit.dart';
+import '../../../../shared/cubits/cubit/user_info_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../shared/models/user.dart';
@@ -19,12 +19,12 @@ class _UserPageState extends State<UserPage> {
   late User userInfo;
   @override
   void initState() {
-    userInfo = BlocProvider.of<EditUserInfoCubit>(context).user;
+    userInfo = BlocProvider.of<UserInfoCubit>(context).user;
     super.initState();
   }
 
   void _changeInfo({String? userName, String? gmail, String? password}) {
-    BlocProvider.of<EditUserInfoCubit>(context)
+    BlocProvider.of<UserInfoCubit>(context)
         .changeInfo(userName: userName, gmail: gmail, password: password);
     Navigator.pop(context);
   }
@@ -35,7 +35,7 @@ class _UserPageState extends State<UserPage> {
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.only(top: 100),
-          child: BlocBuilder<EditUserInfoCubit, EditUserInfoState>(
+          child: BlocBuilder<UserInfoCubit, UserInfoState>(
             builder: (context, state) {
               if (state is EditInfoState) {
                 userInfo = state.user;
