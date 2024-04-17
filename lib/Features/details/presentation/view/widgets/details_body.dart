@@ -10,10 +10,11 @@ class DetailsBody extends StatelessWidget {
   const DetailsBody({
     super.key,
     required this.product,
+    required this.fromHome,
   });
 
   final Product product;
-
+  final bool fromHome;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -55,7 +56,7 @@ class DetailsBody extends StatelessWidget {
                 left: 0,
                 right: 0,
                 bottom: 0,
-                child: AddToCartWidget(product: product),
+                child: AddToCartWidget(product: product, fromHome: fromHome),
               ),
             ],
           ),

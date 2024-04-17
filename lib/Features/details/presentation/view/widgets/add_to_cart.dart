@@ -10,10 +10,11 @@ class AddToCartWidget extends StatefulWidget {
   const AddToCartWidget({
     super.key,
     required this.product,
+    required this.fromHome,
   });
 
   final Product product;
-
+  final bool fromHome;
   @override
   State<AddToCartWidget> createState() => _AddToCartWidgetState();
 }
@@ -95,7 +96,7 @@ class _AddToCartWidgetState extends State<AddToCartWidget>
                           ),
                           const SizedBox(width: 8),
                           Text(
-                            "Add To Cart",
+                            widget.fromHome ? "Add To Cart" : "Add another one",
                             style: TextStyle(
                               fontSize: 24,
                               color: Theme.of(context).colorScheme.primary,

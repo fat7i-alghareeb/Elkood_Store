@@ -47,11 +47,14 @@ class AppRouter {
       case KRouter.detailsScreen:
         return MaterialPageRoute(
           builder: (_) {
-            final Product product = settings.arguments as Product;
+            final Map<String, dynamic> argument =
+                settings.arguments as Map<String, dynamic>;
+            final bool fromHome = argument["fromHome"];
+            final Product product = argument["product"];
             return BlocProvider(
               create: (context) =>
                   CartProductCubit(getIt.get<CartProductsRepoImpl>()),
-              child: DetailsScreen(product: product),
+              child: DetailsScreen(product: product, fromHome: fromHome),
             );
           },
         );

@@ -5,14 +5,15 @@ import '../../../../utils/constants.dart';
 import 'widgets/details_body.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key, required this.product});
+  const DetailsScreen(
+      {super.key, required this.product, required this.fromHome});
   final Product product;
-
+  final bool fromHome;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: detailsAppBar(context),
-      body: DetailsBody(product: product),
+      body: DetailsBody(product: product, fromHome: fromHome),
     );
   }
 

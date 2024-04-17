@@ -17,7 +17,10 @@ class ProductCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.pushNamed(context, KRouter.detailsScreen, arguments: product);
+        Navigator.pushNamed(context, KRouter.detailsScreen, arguments: {
+          "fromHome": true,
+          "product": product,
+        });
       },
       child: Card(
         margin: const EdgeInsets.all(0),

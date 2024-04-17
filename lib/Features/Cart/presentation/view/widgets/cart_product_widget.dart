@@ -19,7 +19,10 @@ class CartProductWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, KRouter.detailsScreen, arguments: product);
+        Navigator.pushNamed(context, KRouter.detailsScreen, arguments: {
+          "fromHome": false,
+          "product": product,
+        });
       },
       child: Card(
         color: Theme.of(context).colorScheme.primary.withOpacity(1),
