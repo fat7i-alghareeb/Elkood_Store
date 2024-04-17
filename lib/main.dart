@@ -23,9 +23,15 @@ void main() async {
       child: const MyApp(),
     ),
   );
-  SystemChrome.setSystemUIChangeCallback((systemOverlaysAreVisible) =>
-      SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
-          overlays: [SystemUiOverlay.top]));
+
+  SystemChrome.setSystemUIChangeCallback(
+      (systemOverlaysAreVisible) => Future.delayed(
+            const Duration(seconds: 4),
+            () => SystemChrome.setEnabledSystemUIMode(
+              SystemUiMode.manual,
+              overlays: [SystemUiOverlay.top],
+            ),
+          ));
   SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual,
       overlays: [SystemUiOverlay.top]);
   SystemChrome.setSystemUIOverlayStyle(
