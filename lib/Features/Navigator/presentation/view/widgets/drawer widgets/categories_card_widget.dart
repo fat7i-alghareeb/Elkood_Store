@@ -46,7 +46,7 @@ class CategoriesCard extends StatelessWidget {
               name,
               style: TextStyle(
                 fontWeight: FontWeight.w500,
-                fontSize: isSelected ? 20 : 18,
+                fontSize: isSelected ? 19 : 17,
                 color: isSelected
                     ? Theme.of(context).colorScheme.primary
                     : Theme.of(context).colorScheme.tertiary,

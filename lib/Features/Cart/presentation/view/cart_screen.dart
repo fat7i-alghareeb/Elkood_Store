@@ -32,7 +32,7 @@ class CartScreen extends StatelessWidget {
                 child: Text(
                   '"There no items in the Cart"',
                   style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 23,
                     fontWeight: FontWeight.bold,
                     color: Colors.grey[350],
                   ),

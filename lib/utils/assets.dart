@@ -1,5 +1,5 @@
 abstract class AssetsImages {
-  static const String tShirt = "images/categories/shirt-long-sleeve.png";
+  static const String tShirt = "images/categories/tshirt.png";
   static const String dress = "images/categories/clothes.png";
   static const String electronics = "images/categories/small-appliance.png";
   static const String jewelery = "images/categories/diamond-ring.png";

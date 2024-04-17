@@ -28,7 +28,7 @@ class _DrawerWidgetState extends State<DrawerWidget> {
   Widget build(BuildContext context) {
     double x = MediaQuery.of(context).size.width;
     return Drawer(
-      width: x * 0.65,
+      width: x * 0.7,
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
