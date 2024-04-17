@@ -1,4 +1,4 @@
-import 'package:elkood_store/shared/models/user.dart';
+import '../../models/user.dart';
 
 abstract class EditUserInfoState {}
 

@@ -1,4 +1,4 @@
-import 'package:elkood_store/shared/widgets/app_image.dart';
+import '../../../../../shared/widgets/app_image.dart';
 
 import '../../../../../utils/router/router_paths.dart';
 import 'package:flutter/material.dart';

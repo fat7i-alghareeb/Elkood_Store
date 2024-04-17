@@ -1,4 +1,4 @@
-import 'package:elkood_store/Features/Cart/presentation/view/widgets/cart_screen_body.dart';
+import 'widgets/cart_screen_body.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../shared/models/product.dart';
