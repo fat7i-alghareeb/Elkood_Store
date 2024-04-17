@@ -46,6 +46,7 @@ class ProductCard extends StatelessWidget {
               child: Text(
                 product.title,
                 maxLines: 2,
+                overflow: TextOverflow.ellipsis,
                 // softWrap: false,
                 style: const TextStyle(
                   fontWeight: FontWeight.bold,

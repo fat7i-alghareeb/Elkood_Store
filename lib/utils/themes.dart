@@ -31,6 +31,7 @@ ThemeData lightMode = ThemeData(
     secondary: lightSecondColor,
   ),
 );
+///////////////////////////////////////////////////////////////
 ThemeData darkMode = ThemeData(
   appBarTheme: const AppBarTheme(
     color: darkMainColor,

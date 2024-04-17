@@ -43,6 +43,7 @@ class CartProductWidget extends StatelessWidget {
                       Text(
                         product.title,
                         maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         //softWrap: false,
                         style: const TextStyle(
                           fontWeight: FontWeight.bold,
